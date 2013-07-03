@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html id="body">
+<head>
+	<title>SiteBlocker</title>
+	<style type="text/css">
+		* { box-sizing: border-box; font-family: verdana;}
+		html, body {height: 100%;}
+		#blocked {
+			display: block;
+			width: 100%;
+			height: calc(100% - 45px);
+			resize:none;
+			outline: none;
+		}
+		#save, #onOff {
+			margin: 5px 0 0 0;
+			border: none;
+			padding: 7px 15px;
+			background: #67a0aa;
+			color: white;
+			border-radius: 5px;
+		}
+		#onOff { float: right; width: 50px;}
+		#onOff.on  { background: #8fe195; }
+		#onOff.off { background: #ff7d7b; }
+		#onOff.on:hover  { background: #79bf80; }
+		#onOff.off:hover { background: #894343; }
+		#save:hover,  #onOff:hover{
+			cursor: pointer;
+			background: #446b72;
+		}
+		#status {
+			font-size: 0.8em;
+			margin-left: 10px;
+		}
+		.popup body { width: 300px; height: 300px;}
+		.popup #blocked { height: calc(100% - 40px); }
+		.error { color: red; }
+		.valid { color: green; }
+
+	</style>
+</head>
+<body>
+<textarea id="blocked"></textarea>
+<input id="save" type="submit" value="SAVE" /><span id="status"></span>
+<input id="onOff" type="submit" value="ON" />
+<script src="options.js"></script>
+</body>
+</html>
